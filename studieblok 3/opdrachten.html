@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../opdrachten.html">Opdrachten</a>
+        </li>
+      </ul>
+
+    </nav>
+    <div class="container" ng-app="">
+      <div class="row">
+        <div class="col-sm">
+        <h2>Opdracht 2</h2>
+        <p>Nummer 1: <input type="number" ng-model="nummer1"></p>
+        <p>Nummer 2: <input type="number" ng-model="nummer2"></p>
+        <h5>Manier 1 ({} manier)</h5>
+        <p>Plus: {{nummer1 + nummer2}}</p>
+        <p>Min: {{nummer1 - nummer2}}</p>
+        <p>Gedeeld: {{nummer1 / nummer2}}</p>
+        <p>Keer: {{nummer1 * nummer2}}</p>
+        <h5>Manier 2 (ng-bind manier)</h5>
+        <p>Plus: <span ng-bind="nummer1 + nummer2"></span></p>
+        <p>Min: <span ng-bind="nummer1 - nummer2"></span></p>
+        <p>Gedeeld: <span ng-bind="nummer1 / nummer2"></span></p>
+        <p>Keer: <span ng-bind="nummer1 * nummer2"></span></p>
+      </div>
+      <div class="col-sm">
+        <h2>Opdracht 3</h2>
+        <p>Hoogte: <input type="number" ng-model="hoogte"></p>
+        <p>Breedte: <input type="number" ng-model="breedte"></p>
+        <div style="background-color:red; width:{{breedte}}px; height:{{hoogte}}px;"></div>
+      </div>
+    </div>
+  </body>
+</html>
