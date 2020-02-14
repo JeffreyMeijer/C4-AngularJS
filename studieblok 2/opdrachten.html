@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../opdrachten.html">Opdrachten</a>
+        </li>
+      </ul>
+
+    </nav>
+    <div class="container" ng-app="">
+      <p>Name: <input type="text" ng-model="name"></p>
+      <p ng-bind="name"></p>
+      <p>Name2: <input type="text" ng-model="anothername"></p>
+      <p ng-bind="anothername"></p>
+    </div>
+  </body>
+</html>
