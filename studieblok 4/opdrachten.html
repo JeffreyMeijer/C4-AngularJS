@@ -47,13 +47,19 @@
             <th>Deuren</th>
             <th>Kenteken</th>
             </thead>
-            <tbody ng-repeat="n in autos">
-              <td ng-bind="autos[$index].merk"></td>
-              <td ng-bind="autos[$index].kleur"></td>
-              <td ng-bind="autos[$index].aantaldeuren"></td>
-              <td ng-bind="autos[$index].kenteken"></td>
+            <tbody ng-repeat="auto in autos">
+              <td ng-bind="auto.merk"></td>
+              <td ng-bind="auto.kleur"></td>
+              <td ng-bind="auto.aantaldeuren"></td>
+              <td ng-bind="auto.kenteken"></td>
             </tbody>
           </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <h2>Opdracht 5</h2>
+          <hr></hr>
         </div>
       </div>
     </div>
