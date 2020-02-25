@@ -40,5 +40,23 @@
         <div style="background-color:red; width:{{breedte}}px; height:{{hoogte}}px;"></div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm" ng-init="auto = {kenteken:'19-GR-LL', kleur: 'Rood', merk:'Mercedes', aantaldeuren:'5'}">
+        <h2>Opdracht 4</h2>
+        <p>Automerk: <span ng-bind="auto.merk"></span></p>
+        <p>Kleur: <span ng-bind="auto.kleur"></span></p>
+        <p>Deuren: <span ng-bind="auto.aantaldeuren"></span></p>
+        <p>Kenteken: <span ng-bind="auto.kenteken"></span></p>
+      </div>
+      <div class="col-sm" ng-init="autos=[{kenteken:'19-GR-LL',kleur:'Rood',merk:'Mercedes',aantaldeuren:'5'},{kenteken:'15-DR-GG',kleur:'Groen',merk:'Audi',aantaldeuren:'3'},{kenteken:'05-FE-PP',kleur:'Wit',merk:'Volkswagen',aantaldeuren:'5'},{kenteken:'12-CV-BB',kleur:'Zwart',merk:'Tesla',aantaldeuren:'5'},{kenteken:'08-MA-02',kleur:'Grijs',merk:'Bugatti',aantaldeuren:'3'}]">
+        <h2>Opdracht 5</h2>
+        <div ng-repeat="n in autos">
+          <p>Automerk auto {{$index+1}}: <span ng-bind="autos[$index].merk"></span></p>
+          <p>Kleur auto {{$index+1}}: <span ng-bind="autos[$index].kleur"></span></p>
+          <p>Deuren auto {{$index+1}}: <span ng-bind="autos[$index].aantaldeuren"></span></p>
+          <p>Kenteken auto {{$index+1}}: <span ng-bind="autos[$index].kenteken"></span></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
