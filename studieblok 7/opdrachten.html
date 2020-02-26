@@ -33,6 +33,15 @@
             <li ng-bind="fruit"></li>
           </ul>
         </div>
+        <div class="col-sm" ng-controller="autoCtrl">
+          <h2>Opdracht 2</h2>
+          <select ng-model="selectedCar" ng-options="auto.kenteken for auto in autos"></select>
+          <h3>Kenteken {{selectedCar.kenteken}} gekozen</h3>
+          <p>Merk: {{selectedCar.merk}}</p>
+          <p>Kleur: {{selectedCar.kleur}}</p>
+          <p>Deuren: {{selectedCar.aantaldeuren}}</p>
+          <p>Prijs: <span ng-bind="selectedCar.prijs | currency: '€ ' : 0"></span></p>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
