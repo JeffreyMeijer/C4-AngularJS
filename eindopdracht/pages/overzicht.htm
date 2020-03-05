@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-sm" ng-controller="persoonCtrl">
+    <table class="table">
+      <thead>
+        <th>Voornaam</th>
+        <th ng-click="orderByMe('Achternaam')">Achternaam</th>
+        <th>Straat</th>
+        <th>Huisnummer</th>
+        <th>Postcode</th>
+        <th ng-click="orderByMe('Woonplaats')">Woonplaats</th>
+        <th>Telefoonnummer</th>
+        <th>Tijd Toegevoegd</th>
+        <th>Delete</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="persoon in personen | orderBy:myOrderBy">
+          <td>{{persoon.Voornaam}}</td>
+          <td>{{persoon.Achternaam}}</td>
+          <td>{{persoon.Straat}}</td>
+          <td>{{persoon.Huisnummer}}</td>
+          <td>{{persoon.Postcode}}</td>
+          <td>{{persoon.Woonplaats}}</td>
+          <td>{{persoon.Telefoonnummer}}</td>
+          <td>{{persoon.TijdToegevoegd}}</td>
+          <td ng-click="deletePerson(persoon.ID)">Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
