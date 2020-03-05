@@ -1,5 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
-app.controller("persoonCtrl", function($scope,$http){
+app.controller("persoonCtrl", function($scope,$http,$location){
   $scope.voornaam;
   $scope.achternaam;
   $scope.straat;
@@ -10,9 +10,9 @@ app.controller("persoonCtrl", function($scope,$http){
   $scope.showData = function () {
     $http.get("getData.php").then(function(response){
       $scope.personen = response.data.records;
+      $location.path("/");
     });
   }
-  $scope.showData();
   $scope.orderByMe = function(x) {
     $scope.myOrderBy = x;
   }
@@ -26,14 +26,7 @@ app.controller("persoonCtrl", function($scope,$http){
       $scope.showData();
     });
   }
-  $scope.addPerson = function(form) {
-    console.log($scope.voornaam);
-    console.log($scope.achternaam);
-    console.log($scope.straat);
-    console.log($scope.huisnummer);
-    console.log($scope.postcode);
-    console.log($scope.woonplaats);
-    console.log($scope.telefoonnummer);
+  $scope.addPerson = function() {
     $http.post("add.php", {
       'voornaam': $scope.voornaam,
       'achternaam': $scope.achternaam,

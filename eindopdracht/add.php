@@ -19,7 +19,7 @@ $postcode = $params->postcode;
 $woonplaats = $params->woonplaats;
 $telefoonnummer = $params->telefoonnummer;
 
-$query = "INSERT INTO personen (Voornaam,Achternaam,Straat,Huisnummer,Postcode,Woonplaats,Telefoonnummer) VALUES($voornaam,$achternaam,$straat,$huisnummer,$postcode,$woonplaats,$telefoonnummer)";
+$query = "INSERT INTO personen (Voornaam,Achternaam,Straat,Huisnummer,Postcode,Woonplaats,Telefoonnummer) VALUES('". $voornaam ."', '" . $achternaam . "', '" . $straat . "', '". $huisnummer . "', '" . $postcode . "', '". $woonplaats . "', '". $telefoonnummer . "')";
 if($conn->query($query) === TRUE) {
 } else {
   echo "Error, could not insert data.";
