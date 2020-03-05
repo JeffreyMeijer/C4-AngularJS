@@ -1,0 +1,13 @@
+<form method="post" name="form">
+  <div>
+    ID: <input class="form-control" ng-model="id" type="number" readonly/>
+    Voornaam: <input class="form-control" ng-model="voornaam" type="text"/>
+    Achternaam: <input class="form-control" ng-model="achternaam" type="text"/>
+    Straat: <input class="form-control" ng-model="straat" type="text"/>
+    Huisnummer: <input class="form-control" ng-model="huisnummer" type="number"/>
+    Postcode: <input class="form-control" ng-model="postcode" type="text"/>
+    Woonplaats: <input class="form-control" ng-model="woonplaats" type="text"/>
+    Telefoonnummer: <input class="form-control" ng-model="telefoonnummer" type="tel"/>
+    <button type="submit" class="btn btn-primary mb-2" ng-click="updatePerson(id)">Verzenden</button>
+  </div>
+</form>
