@@ -45,7 +45,7 @@ app.controller("addCtrl", function($scope,$http,$location) {
   }
 });
 app.controller("persoonCtrl", function($scope,$http,$location,$routeParams){
-  $scope.tooltip = "Hover over rij"
+  $scope.tijd = "Hover over rij"
   $scope.showData = function() {
     $http.get("getData.php").then(function(response){
       $scope.personen = response.data.records;
@@ -53,9 +53,6 @@ app.controller("persoonCtrl", function($scope,$http,$location,$routeParams){
     });
   }
   $scope.orderByMe = function(x) {
-    if(x == "ID") {
-      x = parseInt(x);
-    }
     $scope.myOrderBy = x;
   }
   $scope.deletePerson = function(id) {

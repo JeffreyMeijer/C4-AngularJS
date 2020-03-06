@@ -2,20 +2,20 @@
   <div class="col-sm" ng-init="showData()">
     <table class="table">
       <thead>
-        <th ng-click="orderByMe('ID')">ID</th>
-        <th ng-click="orderByMe('Voornaam')">Voornaam</th>
+        <th>ID</th>
+        <th>Voornaam</th>
         <th ng-click="orderByMe('Achternaam')">Achternaam</th>
-        <th ng-click="orderByMe('Straat')">Straat</th>
-        <th ng-click="orderByMe('Huisnummer')">Huisnummer</th>
-        <th ng-click="orderByMe('Postcode')">Postcode</th>
+        <th>Straat</th>
+        <th>Huisnummer</th>
+        <th>Postcode</th>
         <th ng-click="orderByMe('Woonplaats')">Woonplaats</th>
-        <th ng-click="orderByMe('Telefoonnummer')">Telefoonnummer</th>
-        <th ng-click="orderByMe('TijdToegevoegd')">Toegevoegd</th>
+        <th>Telefoonnummer</th>
+        <th>Toegevoegd</th>
         <th>Update</th>
         <th>Delete</th>
       </thead>
       <tbody>
-        <tr ng-repeat="persoon in personen | orderBy:myOrderBy" ng-mouseover="tooltip = persoon.TijdToegevoegd" ng-mouseleave = "tooltip = 'Hover over rij'">
+        <tr ng-repeat="persoon in personen | orderBy:myOrderBy" ng-mouseover="tijd = persoon.TijdToegevoegd" ng-mouseleave = "tijd = 'Hover over rij'">
           <td>{{persoon.ID}}</td>
           <td>{{persoon.Voornaam}}</td>
           <td>{{persoon.Achternaam}}</td>
@@ -24,7 +24,7 @@
           <td>{{persoon.Postcode}}</td>
           <td>{{persoon.Woonplaats}}</td>
           <td>{{persoon.Telefoonnummer}}</td>
-          <td>{{tooltip}}</td>
+          <td>{{tijd}}</td>
           <td><a ng-href="#!update/{{persoon.ID}}">Update</a></td>
           <td ng-click="deletePerson(persoon.ID)">Delete</td>
         </tr>
