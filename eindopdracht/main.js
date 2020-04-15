@@ -2,6 +2,13 @@ var app = angular.module("myApp", ["ngRoute"]);
 
 app.controller("updateCtrl", function($scope,$http,$location,$routeParams) {
   $scope.id = parseInt($routeParams.id);
+  $scope.voornaam = $routeParams.voornaam;
+  $scope.achternaam = $routeParams.achternaam;
+  $scope.straat = $routeParams.straat;
+  $scope.huisnummer = parseInt($routeParams.huisnummer);
+  $scope.postcode = $routeParams.postcode;
+  $scope.woonplaats = $routeParams.woonplaats;
+  $scope.telefoonnummer = $routeParams.telefoonnummer;
   $scope.showData = function() {
     $http.get("getData.php").then(function(response){
       $scope.personen = response.data.records;
@@ -74,7 +81,7 @@ app.config(function($routeProvider){
     templateUrl: "./pages/create.htm",
     controller: "addCtrl"
   })
-  .when("/update/:id", {
+  .when("/update/:id/:voornaam/:achternaam/:straat/:huisnummer/:postcode/:woonplaats/:telefoonnummer", {
     templateUrl: "./pages/update.htm",
     controller: "updateCtrl"
   })
